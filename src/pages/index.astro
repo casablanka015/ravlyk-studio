@@ -1,16 +1,32 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<BaseLayout title="Ravlyk Studio">
+  <section class="flex flex-col items-center justify-center min-h-screen text-center px-4">
+    <!-- Відео на фоні -->
+    <div class="absolute inset-0 z-[-1] overflow-hidden">
+      <video
+        class="w-full h-full object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="../public/videos/video-intro.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    </div>
+
+    <!-- Контент поверх відео -->
+    <div class="z-10 max-w-3xl py-20">
+      <img src="/images/logo.svg" alt="Ravlyk Studio" class="mx-auto w-28 h-28 mb-6" />
+      <h1 class="text-5xl md:text-4xl  text-white mb-6">Центр фарбування та завивки волосся</h1>
+      <p class="text-white text-lg mb-8">Освітній простір для перукарів</p>
+
+    </div>
+  </section>
+</BaseLayout>
+
+

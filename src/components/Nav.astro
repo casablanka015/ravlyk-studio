@@ -1,0 +1,29 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+</style>
+<nav class="fixed right-8 top-0 h-screen z-20 flex flex-col justify-center py-12">
+  <ul class="flex flex-col items-end space-y-8 font-extralight leading-snug tracking-[0.1em] text-5xl uppercase tracking-wide style="font-family: 'Roboto Flex', sans-serif;" >
+    <li><a href="/" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Головна</a></li>
+    <li><a href="/services" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Послуги</a></li>
+    <li><a href="/consult" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Консультація</a></li>
+    <li><a href="/about" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Про нас</a></li>
+    <li><a href="/contacts" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Контакти</a></li>
+  </ul>
+</nav>
