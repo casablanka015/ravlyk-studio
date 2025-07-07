@@ -1,0 +1,36 @@
+---
+const { title, description, videoSrc, instagramUrl } = Astro.props;
+---
+
+<section class="relative w-full h-[60vh] md:h-[75vh] mb-12 overflow-hidden rounded-sm shadow-lg">
+  <!-- Відео на фоні -->
+  <video
+    class="absolute inset-0 w-full h-full object-cover z-0"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+  >
+    <source src={videoSrc} type="video/mp4" />
+    Ваш браузер не підтримує відео.
+  </video>
+
+  <!-- Напівпрозора підкладка -->
+  <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+
+  <!-- Текст поверх -->
+  <div class="relative z-20 h-full flex flex-col justify-center items-center text-white p-6 sm:p-10 ">
+    <h2 class="text-2xl sm:text-5xl font-semibold mb-2 text-center">{title}</h2>
+    <p class="text-xs sm:text-base text-gray-200 mb-4 max-w-xl leading-tight tracking-wide font-light text-center">{description}</p>
+    <a
+  href={instagramUrl}
+  target="_blank"
+  rel="noopener"
+  class="inline-block border border-white text-white text-sm px-5 py-2 rounded transition duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-lg"
+>
+  Детальніше
+</a>
+  </div>
+</section>
+

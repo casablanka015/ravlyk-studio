@@ -1,22 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ItemCard from '../components/ItemCard.astro';
-import { courses } from '../data/courses.js';
+import ServiceItem from '../components/ServiceItem.astro';
+import { services } from '../data/services.js';
+
+
+
 ---
 
-<BaseLayout title="Сервіси">
-  <section class="container mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold mb-10 text-center">Наші курси</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {courses.map(course => (
-        <ItemCard
-          key={course.id}
-          title={course.title}
-          description={course.description}
-          lessons={course.lessons}
-          videoPreview={course.videoPreview}
-        />
-      ))}
-    </div>
+<BaseLayout title="Наші послуги">
+  <section class="container mx-auto px-4 py-12">
+    <h1 class="text-4xl text-white font-light mb-12 text-center">Наші послуги</h1>
+
+    {services.map((s) => (
+      <ServiceItem {...s} />
+    ))}
   </section>
 </BaseLayout>
