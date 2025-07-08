@@ -1,0 +1,38 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Тест шрифта</title>
+  </head>
+  <body class="bg-black text-white">
+    <h1 class="font-robotoFlex text-5xl"
+        style="font-variation-settings: 'wght' 40, 'wdth' 115;">
+      Roboto Flex?
+    </h1>
+    <ul style="
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  color: white;
+  text-transform: uppercase;">
+  <li>Головна</li>
+  <li>Послуги</li>
+</ul>
+
+  </body>
+</html>
+<nav class="fixed right-8 top-0 h-screen z-20 flex flex-col justify-center py-12">
+  <ul class="flex flex-col items-end space-y-8 font-thin leading-snug text-5xl uppercase style="font-family: 'Barlow', sans-serif; font-weight: 100; font-size: 2.5rem;" >
+    <li><a href="/" class="text-white/60 hover:text-white transition" >Головна</a></li>
+    <li><a href="/services" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Послуги</a></li>
+    <li><a href="/consultation" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Консультація</a></li>
+    <li><a href="/about" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Про нас</a></li>
+    <li><a href="/contacts" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Контакти</a></li>
+  </ul>
+</nav>
+ <!-- git add . git commit -m "Fix fonts"
+git push  -->

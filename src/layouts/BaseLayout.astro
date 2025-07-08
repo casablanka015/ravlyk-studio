@@ -13,20 +13,20 @@ const isHome = Astro.url.pathname === '/';
 
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{title ?? 'Онлайн курси для перукарів'}</title>
-  <meta name="description" content="Ravlyk Studio — навчання для перукарів" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ravlyk Studio — фарбування, стрижки та навчання | Червоноград</title>
+<meta name="description" content="Ravlyk Studio — студія фарбування, стрижок і навчання для перукарів у Червонограді. Професійні послуги та авторські курси від майстрів-практиків." />
+<meta name="keywords" content="перукар Червоноград, стрижка Червоноград, фарбування волосся, навчання перукарів, Ravlyk Studio, завивка, прикореневий обʼєм" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
 
-  <!-- У head -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,wdth@8..144,100..1000,75..125&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-white">
   {isHome ? <Nav /> : <Header />}
   <main class="min-h-screen">
     <slot />
   </main>
-  <Footer />
+  {!isHome && <Footer />}
 </body>
 </html>
 

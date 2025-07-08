@@ -19,11 +19,33 @@ const currentPath = Astro.url.pathname;
   }
 </style>
 <nav class="fixed right-8 top-0 h-screen z-20 flex flex-col justify-center py-12">
-  <ul class="flex flex-col items-end space-y-8 font-extralight leading-snug tracking-[0.1em] text-5xl uppercase tracking-wide style="font-family: 'Roboto Flex', sans-serif;" >
-    <li><a href="/" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Головна</a></li>
-    <li><a href="/services" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Послуги</a></li>
-    <li><a href="/consultation" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Консультація</a></li>
-    <li><a href="/about" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Про нас</a></li>
-    <li><a href="/contacts" class="text-white/60 hover:text-white transition" style="font-variation-settings: 'wght' 100, 'wdth' 115;">Контакти</a></li>
+  <ul class="flex flex-col items-end space-y-10 font-[100] text-white font-light tracking-wider uppercase "
+      style="font-family: 'Inter', sans-serif;">
+    
+    <li class="text-right leading-none text-white/60">
+      <span class="text-xs text-white/60 block">home</span>
+      <a href="/" class="text-4xl hover:text-white transition">Головна</a>
+    </li>
+
+    <li class="text-right leading-none text-white/60">
+      <span class="text-xs block">/services</span>
+      <a href="/services" class="text-4xl hover:text-white transition">Послуги</a>
+    </li>
+
+    <li class="text-right leading-none text-white/60">
+      <span class="text-xs block">/consult</span>
+      <a href="/consultation" class="text-4xl hover:text-white transition">Консультація</a>
+    </li>
+
+    <li class="text-right leading-none text-white/60">
+      <span class="text-xs block">/about</span>
+      <a href="/about" class="text-4xl hover:text-white transition">Про нас</a>
+    </li>
+
+    <li class="text-right leading-none text-white/60">
+      <span class="text-xs block">/contacts</span>
+      <a href="/contacts" class="text-4xl hover:text-white transition">Контакти</a>
+    </li>
+
   </ul>
 </nav>
