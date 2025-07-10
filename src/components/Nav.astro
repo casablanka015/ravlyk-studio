@@ -18,34 +18,42 @@ const currentPath = Astro.url.pathname;
     animation: fadeInUp 0.6s ease forwards;
   }
 </style>
-<nav class="fixed right-8 top-0 h-screen z-20 flex flex-col justify-center py-12">
-  <ul class="flex flex-col items-end space-y-10 font-[100] text-white font-light tracking-wider uppercase "
+
+<nav class="fixed right-8 top-0 h-screen z-20 flex flex-col justify-center items-end py-12 pr-2">
+  <ul class="flex flex-col items-end justify-center h-full space-y-6 font-[100] text-white font-light tracking-wider uppercase"
       style="font-family: 'Inter', sans-serif;">
-    
-    <li class="text-right leading-none text-white/60">
-      <span class="text-xs text-white/60 block">home</span>
+
+    <li class="text-right leading-none text-white/60 fade-in-up">
+      <span class="text-xs block">home</span>
       <a href="/" class="text-4xl hover:text-white transition">Головна</a>
     </li>
 
-    <li class="text-right leading-none text-white/60">
+    <li class="text-right leading-none text-white/60 fade-in-up">
       <span class="text-xs block">/services</span>
       <a href="/services" class="text-4xl hover:text-white transition">Послуги</a>
     </li>
 
-    <li class="text-right leading-none text-white/60">
+    <li class="text-right leading-none text-white/60 fade-in-up">
       <span class="text-xs block">/consult</span>
       <a href="/consultation" class="text-4xl hover:text-white transition">Консультація</a>
     </li>
 
-    <li class="text-right leading-none text-white/60">
+    <li class="text-right leading-none text-white/60 fade-in-up">
       <span class="text-xs block">/about</span>
       <a href="/about" class="text-4xl hover:text-white transition">Про нас</a>
     </li>
 
-    <li class="text-right leading-none text-white/60">
+    <li class="text-right leading-none text-white/60 fade-in-up">
       <span class="text-xs block">/contacts</span>
       <a href="/contacts" class="text-4xl hover:text-white transition">Контакти</a>
     </li>
 
+    <!-- Логотип у списку -->
+    <li class="pt-8 ml-8">
+      <img src="/images/logo-transparent.png"
+           alt="Diana Ravlyk"
+           class="w-48 h-auto drop-shadow-md opacity-80 hover:opacity-100 transition duration-300"
+      />
+    </li>
   </ul>
 </nav>
